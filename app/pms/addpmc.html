@@ -1,0 +1,41 @@
+<h1>PMC</h1>
+<div class="form-container">
+    <form method="post">
+        <div class="form-group">
+            <label for="pmcName">PMC Name</label>
+            <input type="text" id="pmcName" class="form-control" ng-model="vm.pmc.pmcName" required />
+        </div>
+        <div class="form-group">
+            <label for="pmcAddress1">Address1</label>
+            <input type="text" id="pmcAddress1" class="form-control" ng-model="vm.pmc.pmcAddress1" />
+        </div>
+        <div class="form-group">
+            <label for="pmcAddress2">Address2</label>
+            <input type="text" id="pmcAddress2" class="form-control" ng-model="vm.pmc.pmcAddress2" />
+        </div>
+        <div class="form-group">
+            <label for="pmcCity">City</label>
+            <input type="text" id="pmcCity" class="form-control" ng-model="vm.pmc.pmcCity" />
+        </div>
+        <div class="form-group">
+            <label for="pmcState">State</label>
+            <input type="text" id="pmcState" class="form-control" ng-model="vm.pmc.pmcState" />
+        </div>
+        <div class="form-group">
+            <label for="pmcPostalCode">Postal Code</label>
+            <input type="text" id="pmcPostalCode" class="form-control" ng-model="vm.pmc.pmcPostalCode" />
+        </div>
+        <div class="form-group">
+            <label for="pmcCountry">Country</label>
+            <input type="text" id="pmcCountry" class="form-control" ng-model="vm.pmc.pmcCountry" />
+        </div>
+        <div class="form-group">
+            <label for="pmcPhone">Phone Number</label>
+            <input type="text" id="pmcPhone" class="form-control" ng-model="vm.pmc.pmcPhone" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" ng-click="vm.createPMC()">Save</button>
+            <button class="btn btn-danger" ng-click="vm.deletePMC()">Delete</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,41 @@
+<h1>PMS</h1>
+<div class="form-container">
+    <form method="post">
+        <div class="form-group">
+            <label for="pmsName">PMS Name</label>
+            <input type="text" id="pmsName" class="form-control" ng-model="vm.pms.pmsName" required />
+        </div>
+        <div class="form-group">
+            <label for="pmsAddress1">Address1</label>
+            <input type="text" id="pmsAddress1" class="form-control" ng-model="vm.pms.pmsAddress1" />
+        </div>
+        <div class="form-group">
+            <label for="pmsAddress2">Address2</label>
+            <input type="text" id="pmsAddress2" class="form-control" ng-model="vm.pms.pmsAddress2" />
+        </div>
+        <div class="form-group">
+            <label for="pmsCity">City</label>
+            <input type="text" id="pmsCity" class="form-control" ng-model="vm.pms.pmsCity" />
+        </div>
+        <div class="form-group">
+            <label for="pmsState">State</label>
+            <input type="text" id="pmsState" class="form-control" ng-model="vm.pms.pmsState" />
+        </div>
+        <div class="form-group">
+            <label for="pmsPostalCode">Postal Code</label>
+            <input type="text" id="pmsPostalCode" class="form-control" ng-model="vm.pms.pmsPostalCode" />
+        </div>
+        <div class="form-group">
+            <label for="pmsCountry">Country</label>
+            <input type="text" id="pmsCountry" class="form-control" ng-model="vm.pms.pmsCountry" />
+        </div>
+        <div class="form-group">
+            <label for="pmsPhone">Phone Number</label>
+            <input type="text" id="pmsPhone" class="form-control" ng-model="vm.pms.pmsPhone" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" ng-click="vm.createPMS()">Save</button>
+            <button class="btn btn-danger" ng-click="vm.deletePMS()">Delete</button>
+        </div>
+    </form>
+</div>
