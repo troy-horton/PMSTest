@@ -1,5 +1,7 @@
 ﻿{
     "connectionString": "localhost:27017/PMSSite",
     "apiUrl":  "http://localhost:3000/api",
+    "llapiUrl":  "https://public-api.apis.leisurelink.com",
+    "llapiKey": "TroyTest",
     "secret": "REPLACE THIS WITH YOUR OWN SECRET, IT CAN BE ANY STRING"
 }

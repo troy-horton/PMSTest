@@ -2,6 +2,7 @@ var config = require('config.json');
 var express = require('express');
 var router = express.Router();
 var pmcService = require('services/pmc.service');
+var request = require('request');
 
 // routes
 router.post('/createpmc', createpmc);
@@ -31,6 +32,20 @@ function createpmc(req, res) {
     pmcService.create(req.body)
         .then(function () {
             res.sendStatus(200);
+            request.post({
+                url: config.apiUrl + '/llapi/createLLPmc',
+                form: req.body,
+                json: true
+            }, function (error, response, body) {
+                if (error) {
+                    console.log(error);
+                }
+
+                if (response.statusCode !== 200) {
+                    console.log(response);
+                }
+
+            });
         })
         .catch(function (err) {
             res.status(400).send(err);
