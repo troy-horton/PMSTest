@@ -6,6 +6,18 @@
             <input type="text" id="pmcName" class="form-control" ng-model="vm.pmc.pmcName" required />
         </div>
         <div class="form-group">
+            <label for="pmcPhone">Phone Number</label>
+            <input type="text" id="pmcPhone" class="form-control" ng-model="vm.pmc.pmcPhone" required/>
+        </div>
+        <div class="form-group">
+            <label for="pmcEmail">Email</label>
+            <input type="text" id="pmcEmail" class="form-control" ng-model="vm.pmc.pmcEmail" required/>
+        </div>
+        <div class="form-group">
+            <label for="pmcUrl">Website</label>
+            <input type="text" id="pmcUrl" class="form-control" ng-model="vm.pmc.pmcUrl" required/>
+        </div>
+        <div class="form-group">
             <label for="pmcAddress1">Address1</label>
             <input type="text" id="pmcAddress1" class="form-control" ng-model="vm.pmc.pmcAddress1" />
         </div>
@@ -28,18 +40,6 @@
         <div class="form-group">
             <label for="pmcCountry">Country</label>
             <input type="text" id="pmcCountry" class="form-control" ng-model="vm.pmc.pmcCountry" />
-        </div>
-        <div class="form-group">
-            <label for="pmcPhone">Phone Number</label>
-            <input type="text" id="pmcPhone" class="form-control" ng-model="vm.pmc.pmcPhone" />
-        </div>
-        <div class="form-group">
-            <label for="pmcEmail">Email</label>
-            <input type="text" id="pmcEmail" class="form-control" ng-model="vm.pmc.pmcEmail" />
-        </div>
-        <div class="form-group">
-            <label for="pmcUrl">Website</label>
-            <input type="text" id="pmcUrl" class="form-control" ng-model="vm.pmc.pmcUrl" />
         </div>
         <div class="form-group">
             <button class="btn btn-primary" ng-click="vm.createPMC()">Save</button>

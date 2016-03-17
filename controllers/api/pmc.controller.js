@@ -34,15 +34,17 @@ function createpmc(req, res) {
             res.sendStatus(200);
             request.post({
                 url: config.apiUrl + '/llapi/createLLPmc',
-                form: req.body,
-                json: true
+                //form: req.body,
+                json: req.body
             }, function (error, response, body) {
                 if (error) {
-                    console.log(error);
+                    console.log(response, error);
                 }
 
-                if (response.statusCode !== 200) {
-                    console.log(response);
+                if (response.statusCode == 202) {
+                    console.log('whoopdeedoo');
+                }else{
+                    console.log(response.statusCode, body);
                 }
 
             });

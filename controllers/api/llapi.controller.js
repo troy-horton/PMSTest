@@ -12,39 +12,37 @@ var config = require('config.json');
 router.post('/createLLPmc', createLLPmc);
 
 function createLLPmc(req, res) {
-    res.sendStatus(200);
+
     request.post({
         url: config.llapiUrl + '/hub/v2/pmcs',
         qs: {apiKey: config.llapiKey},
-        json: {
-            "name": req.body.pmcName,
-            "phoneNumber": {
-                "countryCode": "666",
-                "mainNumber": req.body.pmcPhone,
-                "ext": "555"
-            },
-            "reservationPhoneNumber": {
-                "countryCode": "666",
-                "mainNumber": req.body.pmcPhone,
-                "ext": "555"
-            },
-            "emailAddress": req.body.pmcEmail,
-            "websiteUrl": req.body.pmcUrl
-        },
-        json: true
+        json:
+    {
+        "name": req.body.pmcName,
+        "phoneNumber": {
+        "countryCode": "555",
+            "mainNumber": req.body.pmcPhone,
+            "ext": "1111"
+    },
+        "reservationPhoneNumber": {
+        "countryCode": "555",
+            "mainNumber": req.body.pmcPhone,
+            "ext": "1111"
+    },
+        "emailAddress": req.body.pmcEmail,
+        "websiteUrl": req.body.pmcUrl
+    }
+
     }, function (error, response, body) {
         if (error) {
-            console.log(error);
+            console.log(response, body);
         }
-
-        //if (response.statusCode !== 200) {
-        //    return ({
-        //        error: response.body,
-        //        pmcName: req.body.pmcName
-        //        //lastName: req.body.lastName,
-        //        //username: req.body.username
-        //    });
-        //}
+        res.sendStatus(response.statusCode);
+        if (response.statusCode == 202) {
+            console.log(response.headers['location']);
+        }else{
+            console.log(response.statusCode, body);
+        }
         // return to login page with success message
         //req.session.success = 'LeisureLink PMC Creation successful';
         //return res.redirect('/login');
